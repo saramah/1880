@@ -34,7 +34,7 @@ from auth import *
 LOGIN_URL = "http://secure.ancestry.com/security/passwordlogin.aspx?"
 DISABLE_NEW_URL = "http://search.ancestry.com/search/default.aspx?new=0"
 LOGOUT_URL = "http://www.ancestry.com/security/loginredir.aspx?logout=true&home=true"
-SEARCH_URL = "http://search.ancestry.com/cgi-bin/sse.dll?rank=1&gsfn=&gsln=&=&f5=MA&f4=Suffolk&f7=Boston&f42=Self&f8=&f15=&f27=&f21=&rg_81004011__date=&rs_81004011__date=0&_8000C002=&f28=&_80008002=&f16=&_80018002=&f6=&f11=&f10=&f22=%s&f43=%s&gskw=&prox=1&db=1880usfedcen&ti=0&ti.si=0&gl=&gss=IMAGE&gst=&so=3"
+SEARCH_URL = "http://search.ancestry.com/cgi-bin/sse.dll?rank=1&gsfn=&gsln=&=&f5=MA&f4=Suffolk&f7=Boston&f42=&f8=&f15=&f27=&f21=&rg_81004011__date=&rs_81004011__date=0&_8000C002=&f28=&_80008002=&f16=&_80018002=&f6=&f11=&f10=&f22=%s&f43=%s&gskw=&prox=1&db=1880usfedcen&ti=0&ti.si=0&gl=&gss=IMAGE&gst=&so=3"
 
 def buildlist(path):
     build = []
