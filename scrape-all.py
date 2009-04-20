@@ -65,7 +65,7 @@ br.open(DISABLE_NEW_URL)
 
 print "Beginning search queries..."
 pattern = r'Viewing <b>.+?</b> of <b>((?:\d|,)+)</b>'
-outfile = open("output", 'w')
+outfile = open("output.txt", 'w')
 for district in enum_districts:
     for occupation in occs:
         br.open(SEARCH_URL % (district, occupation))
