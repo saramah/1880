@@ -31,7 +31,7 @@ import time
 import mechanize
 from auth import *
 
-LOGIN_URL = "http://secure.ancestry.com/security/passwordlogin.aspx?"
+LOGIN_URL = "http://nrs.harvard.edu/urn-3:hul.eresource:ancestry"
 DISABLE_NEW_URL = "http://search.ancestry.com/search/default.aspx?new=0"
 LOGOUT_URL = "http://www.ancestry.com/security/loginredir.aspx?logout=true&home=true"
 SEARCH_URL = "http://search.ancestry.com/cgi-bin/sse.dll?rank=1&gsfn=&gsln=&=&f5=MA&f4=Suffolk&f7=Boston&f42=Self&f8=&f15=&f27=&f21=&rg_81004011__date=&rs_81004011__date=0&_8000C002=&f28=&_80008002=&f16=&_80018002=&f6=&f11=&f10=&f22=%s&f43=%s&gskw=&prox=1&db=1880usfedcen&ti=0&ti.si=0&gl=&gss=IMAGE&gst=&so=3"
@@ -49,10 +49,11 @@ occs = buildlist("occupations.txt")
 
 print "Logging in..."
 br = mechanize.Browser()
+br.set_handle_robots(False)
 br.open(LOGIN_URL)
 login_form = br.forms().next()
-login_form.set_value(usr, name="userNameTB")
-login_form.set_value(pwd, name="passwordTB")
+login_form.set_value(usr, name="__authen_id")
+login_form.set_value(pwd, name="__authen_password")
 br.select_form("LoginForm")
 print "Confirming login..."
 response = br.submit()
