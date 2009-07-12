@@ -46,7 +46,7 @@ for(var index = 0, place = places[index]; index < pl_length; index++, place = pl
       sleep(5)
     }
 }
-write("output.csv", results);
+write("output-place.csv", results);
 
 
 
